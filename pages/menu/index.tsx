@@ -35,14 +35,14 @@ const Menu: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = (
 export default Menu
 
 export const getServerSideProps: GetServerSideProps = async () => {
-
+    
     const data = await prisma.product.findMany();
     return {
         props: {
             products: {
-                drinks: data.filter(x => x.productCategoryId === 4),
-                meals: data.filter(x => x.productCategoryId === 5),
-                snacks: data.filter(x => x.productCategoryId === 6),
+                drinks: data.filter((x: Product) => x.productCategoryId === 4),
+                meals: data.filter((x: Product) => x.productCategoryId === 5),
+                snacks: data.filter((x: Product) => x.productCategoryId === 6),
             }
         }
     }
