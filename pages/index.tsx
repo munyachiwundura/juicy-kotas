@@ -1,6 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+import AboutUs from '../components/aboutUs'
+import Button from '../components/button'
+import ProductItem from '../components/productItem'
+import ReviewItem from '../components/reviewItem'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -13,58 +18,45 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <header className={styles.header}>
+          <div className={styles.header_text}>
+            <h1>Juicy Kotas</h1>
+            <h2>Fast food for Fast Times</h2>
+            <div className={styles.call_to_action}>
+              <Link href={'/order'}><Button title='Order Now'/></Link>
+              <Link href={'/contact'}>
+                <p>Contact Us</p>
+              </Link>
+            </div>
+          </div>
+          <Image src={'/img/products/kota.png'} width={500} height={500}/>
+        </header>
+        <section>
+          <h1>About Us</h1>
+        <AboutUs/>
+        </section>
+        <section>
+          <h1>Best Sellers</h1>
+          <div className={styles.products}>
+            <ProductItem image='/img/products/burger.png' intro='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' preview={false} title='Burger' price={30}/>
+            <ProductItem image='/img/products/burger.png' intro='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' preview={false} title='Burger' price={30}/>
+            <ProductItem image='/img/products/burger.png' intro='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' preview={false} title='Burger' price={30}/>
+          </div>
+        </section>
+        <section>
+          <h1>What Our Customers are Saying</h1>
+          <ReviewItem image='/img/janice.png' rating={3} review='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' reviewer='Janice'/>
+        </section>
+        <section>
+          <h1>What Are You Waiting For</h1>
+          <div className={styles.call_to_action}>
+              <Link href={'/order'}><Button title='Order Now'/></Link>
+              <Link href={'/contact'}>
+                <p>Contact Us</p>
+              </Link>
+            </div>
+        </section>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }

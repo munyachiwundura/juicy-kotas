@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  /* width: 380px; */
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  padding-right: 2rem;
+}
+
+.image_and_title_container {
+  display: flex;
+  align-items: center;
+}
+
+.image_and_title_container p {
+  width: 100px;
+}
+
+.container p {
+  margin: 0 1rem;
+  font-size: 1.25rem;
+}
+
+.container i {
+  font-size: 1.25rem;
+}
