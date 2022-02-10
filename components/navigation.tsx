@@ -13,19 +13,22 @@ const Navigation: FunctionComponent<Props> = (props) => {
   const { data: session } = useSession()
   const {state, dispatch} = useContext(AppContext)
   const [open, setOpen] = useState(true)
+  const [mobile, setMobile] = useState(true)
   
 
   useEffect (() => {
     window.innerWidth > 800?setOpen(true) : setOpen(false)
+    window.innerWidth > 800?setMobile(true) : setMobile(false)
     window.addEventListener('resize', () => {
       window.innerWidth > 800?setOpen(true) : setOpen(false)
+      window.innerWidth > 800?setMobile(true) : setMobile(false)
     }
     )
 },[])
 
   return (
     <>
-    {window.innerWidth < 800 && open && <div onClick={()=> setOpen(false)} className={styles.backdrop}></div>}
+    {!mobile && open && <div onClick={()=> setOpen(false)} className={styles.backdrop}></div>}
   <nav className={styles.nav}>
     <Link href={'/'}>
     <h1 className={styles.brand} >Juicy Kotas</h1>
