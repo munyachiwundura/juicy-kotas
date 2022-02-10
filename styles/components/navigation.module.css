@@ -1,9 +1,21 @@
 .nav {
+  position: fixed;
+  background: var(--white);
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 2vw 2vw;
+  padding: 1vw 2vw;
+  z-index: 2;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3;
 }
 .nav_items {
   position: absolute;
@@ -33,12 +45,32 @@
   cursor: pointer;
 }
 
+.cart {
+  position: relative;
+}
+
+.cart p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 0.7rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  top: 0;
+  right: -5px;
+}
+
 @media only screen and (max-width: 800px) {
   .nav_items {
     flex-direction: column;
-    height: 95vh;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    height: 100vh;
+    right: 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     align-items: center;
   }
   #openButton {

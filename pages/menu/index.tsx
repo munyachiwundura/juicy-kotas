@@ -13,19 +13,19 @@ const Menu: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = (
         <section>
             <h2>Meals</h2>
             <div className="cards_container">
-                {products.meals.map((x: Product , y: number) => <ProductItem preview={true} key={y} image={`/img/products/${x.image}`} intro={x.description} price={x.price} title={x.title}/>)}
+                {products.meals.map((x: Product , y: number) => <ProductItem id={x.id} preview={true} key={y} image={`/img/products/${x.image}`} intro={x.description} price={x.price} title={x.title}/>)}
             </div>
         </section>
         <section>
             <h2>Snacks</h2>
             <div className="cards_container">
-                {products.snacks.map((x: Product , y: number) => <ProductItem preview={true} key={y} image={`/img/products/${x.image}`} intro={x.description} price={x.price} title={x.title}/>)}
+                {products.snacks.map((x: Product , y: number) => <ProductItem id={x.id} preview={true} key={y} image={`/img/products/${x.image}`} intro={x.description} price={x.price} title={x.title}/>)}
             </div>
         </section>
         <section>
             <h2>Drinks</h2>
             <div className="cards_container">
-                {products.drinks.map((x: Product , y: number) => <ProductItem preview={true} key={y} image={`/img/products/${x.image}`} intro={x.description} price={x.price} title={x.title}/>)}
+                {products.drinks.map((x: Product , y: number) => <ProductItem id={x.id} preview={true} key={y} image={`/img/products/${x.image}`} intro={x.description} price={x.price} title={x.title}/>)}
             </div>
         </section>
     </main>

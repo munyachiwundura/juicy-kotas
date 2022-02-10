@@ -38,9 +38,9 @@ const Home: NextPage = () => {
         <section>
           <h1>Best Sellers</h1>
           <div className={styles.products}>
-            <ProductItem image='/img/products/burger.png' intro='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' preview={false} title='Burger' price={30}/>
-            <ProductItem image='/img/products/burger.png' intro='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' preview={false} title='Burger' price={30}/>
-            <ProductItem image='/img/products/burger.png' intro='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' preview={false} title='Burger' price={30}/>
+            <ProductItem id={1} image='/img/products/burger.png' intro='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' preview={false} title='Burger' price={30}/>
+            <ProductItem id={1} image='/img/products/burger.png' intro='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' preview={false} title='Burger' price={30}/>
+            <ProductItem id={1} image='/img/products/burger.png' intro='Chimoko dheng kupindura Ndokubva ndatanga kukungura Yedu yekusada kupfuurwa nezvinhu Ko, Kakandifumura?' preview={false} title='Burger' price={30}/>
           </div>
         </section>
         <section>
